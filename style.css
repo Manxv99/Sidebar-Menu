@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main_box{
+    background-image: url("photo.jpeg");
+    height: 100vh;  /*when we want to fill the entire screen*/
+    background-size: cover;
+}
+
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 14px;
+    top: 11px;
+    transition: all 0.2s ease-in;
+}
+
+.sidebar_menu{
+    position: absolute;
+    left: -400px;
+    height: 100vh;
+    width: 368px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+ 
+.logo{
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+    height: 66px;
+}
+
+.logo a{
+    position: absolute;
+    left: 70px;
+    top: 13px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.menu li{
+    margin-top: 25px;
+    padding: 15px 17px;
+    
+}
+
+.menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px
+}
+
+.menu i{
+    padding-right: 8px;
+}
+
+.btn_two {
+    color: grey;
+    font-size: 30px;
+    position: absolute;
+    top: 12px;
+    left: 332px;
+}
+.btn_two i{
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.social_media{
+    position: absolute;
+    bottom: 33px;
+    left: 55px;  
+    opacity: 0.5;
+}
+
+.social_media i{
+    margin: 0 19px;
+    padding: 0 2px;
+}
+
+#check{
+    display: none;
+}
+
+.btn_one i:hover{
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.btn_two i:hover{
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 1);
+    /* font-size: 25px; */
+}
+
+.social_media i:hover{
+    color: bisque;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#check:checked ~ .sidebar_menu{
+    left:0px;
+}
+
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
